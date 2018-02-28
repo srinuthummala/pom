@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="2" ignored="0" total="4" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="112873" started-at="2017-11-25T09:46:34Z" finished-at="2017-11-25T09:48:27Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="112873" started-at="2017-11-25T09:46:34Z" finished-at="2017-11-25T09:48:27Z">
+      <class name="TestCases.TestCase1">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:TestCases.TestCase1@180bc464]" name="beforeMethod" is-config="true" duration-ms="10372" started-at="2017-11-25T15:16:34Z" finished-at="2017-11-25T15:16:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="test1()[pri:0, instance:TestCases.TestCase1@180bc464]" name="test1" duration-ms="19789" started-at="2017-11-25T15:16:44Z" finished-at="2017-11-25T15:17:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test1 -->
+        <test-method status="PASS" signature="takeScreenShot(org.testng.ITestResult)[pri:0, instance:TestCases.TestCase1@180bc464]" name="takeScreenShot" is-config="true" duration-ms="3424" started-at="2017-11-25T15:17:04Z" finished-at="2017-11-25T15:17:08Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test1 status=SUCCESS method=TestCase1.test1()[pri:0, instance:TestCases.TestCase1@180bc464] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShot -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:TestCases.TestCase1@180bc464]" name="beforeMethod" is-config="true" duration-ms="5261" started-at="2017-11-25T15:17:08Z" finished-at="2017-11-25T15:17:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="FAIL" signature="test2()[pri:0, instance:TestCases.TestCase1@180bc464]" name="test2" duration-ms="18291" started-at="2017-11-25T15:17:13Z" finished-at="2017-11-25T15:17:31Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:93)
+	at org.testng.Assert.failNotEquals(Assert.java:512)
+	at org.testng.Assert.assertTrue(Assert.java:41)
+	at org.testng.Assert.assertTrue(Assert.java:51)
+	at TestCases.TestCase1.test2(TestCase1.java:51)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:373)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:334)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:119)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:407)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2 -->
+        <test-method status="PASS" signature="takeScreenShot(org.testng.ITestResult)[pri:0, instance:TestCases.TestCase1@180bc464]" name="takeScreenShot" is-config="true" duration-ms="3895" started-at="2017-11-25T15:17:31Z" finished-at="2017-11-25T15:17:35Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test2 status=FAILURE method=TestCase1.test2()[pri:0, instance:TestCases.TestCase1@180bc464] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShot -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:TestCases.TestCase1@180bc464]" name="beforeMethod" is-config="true" duration-ms="5387" started-at="2017-11-25T15:17:35Z" finished-at="2017-11-25T15:17:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="FAIL" signature="test3()[pri:0, instance:TestCases.TestCase1@180bc464]" name="test3" duration-ms="29601" started-at="2017-11-25T15:17:41Z" finished-at="2017-11-25T15:18:10Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:93)
+	at org.testng.Assert.failNotEquals(Assert.java:512)
+	at org.testng.Assert.assertTrue(Assert.java:41)
+	at org.testng.Assert.assertTrue(Assert.java:51)
+	at TestCases.TestCase1.test3(TestCase1.java:61)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:373)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:334)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:119)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:407)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test3 -->
+        <test-method status="PASS" signature="takeScreenShot(org.testng.ITestResult)[pri:0, instance:TestCases.TestCase1@180bc464]" name="takeScreenShot" is-config="true" duration-ms="4083" started-at="2017-11-25T15:18:10Z" finished-at="2017-11-25T15:18:14Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test3 status=FAILURE method=TestCase1.test3()[pri:0, instance:TestCases.TestCase1@180bc464] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShot -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:TestCases.TestCase1@180bc464]" name="beforeMethod" is-config="true" duration-ms="4244" started-at="2017-11-25T15:18:14Z" finished-at="2017-11-25T15:18:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="test4()[pri:0, instance:TestCases.TestCase1@180bc464]" name="test4" duration-ms="5764" started-at="2017-11-25T15:18:19Z" finished-at="2017-11-25T15:18:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test4 -->
+        <test-method status="PASS" signature="takeScreenShot(org.testng.ITestResult)[pri:0, instance:TestCases.TestCase1@180bc464]" name="takeScreenShot" is-config="true" duration-ms="2291" started-at="2017-11-25T15:18:24Z" finished-at="2017-11-25T15:18:27Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test4 status=SUCCESS method=TestCase1.test4()[pri:0, instance:TestCases.TestCase1@180bc464] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShot -->
+      </class> <!-- TestCases.TestCase1 -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
