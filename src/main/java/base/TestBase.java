@@ -6,15 +6,19 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.AfterMethod;
+
+import utility.Utility;
 
 public class TestBase {
 	public static WebDriver driver;
 	public static Properties prop;
 	
-	
+	public static Logger log = Utility.getLogger(TestBase.class);
 	public TestBase() {
 		prop = new Properties();
 		try {
@@ -31,8 +35,9 @@ public class TestBase {
 	
 	
 	public void initialization() {
+		
 		String browserName = prop.getProperty("browser");
-
+		log.info(browserName+" browser launching");
 		if(browserName.equals("chrome")) {
 			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/src/main/resources/drivers/chromedriver.exe");
 			//options = new ChromeOptions();
@@ -44,13 +49,22 @@ public class TestBase {
 			driver = new FirefoxDriver();
 		}
 		
+		log.info(browserName+" browser launched");
 
 		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
-		driver.get(prop.getProperty("url"));
+		String url = prop.getProperty("url");
+		log.info("launching url: "+url);
+		driver.get(url);
+		log.info("url launched");
 		
+	}
+	
+	@AfterMethod
+	public void quit() {
+		driver.quit();
 	}
 	
 	
