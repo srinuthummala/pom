@@ -8,10 +8,10 @@ import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.AfterMethod;
-
+import org.openqa.selenium.interactions.Actions;
 import utility.Utility;
 
 public class TestBase {
@@ -39,7 +39,7 @@ public class TestBase {
 		String browserName = prop.getProperty("browser");
 		log.info(browserName+" browser launching");
 		if(browserName.equals("chrome")) {
-			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/src/main/resources/drivers/chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/src/main/resources/drivers/chromedriver2.33.exe");
 			//options = new ChromeOptions();
 			//options.addArguments("window-size = 1400,800");
 			//options.addArguments("headless");
@@ -62,11 +62,26 @@ public class TestBase {
 		
 	}
 	
-	@AfterMethod
-	public void quit() {
-		driver.quit();
+	
+	
+	public void setText(WebElement element, String text) {
+		element.clear();
+		element.sendKeys(text);
 	}
 	
+	public void click(WebElement element) {
+		element.click();
+	}
 	
+	public String getText(WebElement element) {
+		return element.getText();
+	}
+	public boolean isDisplayed(WebElement element) {
+		return element.isDisplayed();
+	}
 
+	public void mouseHoverOn(WebElement element) {
+		Actions action = new Actions(driver);
+		action.moveToElement(element).perform();
+	}
 }

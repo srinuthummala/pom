@@ -2,6 +2,7 @@ package TestCases;
 
 import org.apache.log4j.Logger;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -29,14 +30,19 @@ public class HomePageTest extends TestBase {
 	}
 	
 	@Test
-	public void veryLogoutFunctionality()
+	public void veryfyLogoutFunctionality()
 	{
-		log.info("started veryLogoutFunctionality ");
+		log.info("============== started veryLogoutFunctionality ================");
 		loginPage.login(prop.getProperty("userid"),prop.getProperty("password"));
 		homePage.clickBtnLogout();
-		Assert.assertEquals("CRMPRO", loginPage.getLoginPageTitle());
-		log.info(" veryLogoutFunctionality success ");
+		Assert.assertTrue(driver.getPageSource().contains("#1 Free CRM for Any Business"));
+		log.info("============== veryLogoutFunctionality success ================");
 
+	}
+	
+	@AfterMethod
+	public void quit() {
+		driver.close();
 	}
 	
 	 

@@ -2,6 +2,7 @@ package TestCases;
 
 import org.apache.log4j.Logger;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -31,13 +32,16 @@ public class LoginPageTest extends TestBase {
 	
 	@Test
 	public void verifyLogin() {
-		log.info("started verify login");
+		log.info("======started verify login test method==========");
 		loginPage.login(prop.getProperty("userid"),prop.getProperty("password"));
 		Assert.assertTrue(homePage.isLogoutDisplayed());
-		log.info("verify login completed");
+		log.info("=======verify login test method completed==========");
 
 	}
 	
-	
+	@AfterMethod
+	public void quit() {
+		driver.quit();
+	}
 
 }

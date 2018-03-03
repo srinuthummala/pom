@@ -46,15 +46,18 @@ public class LoginPage extends TestBase {
 	
 	public HomePage login(String uname, String pass) {
 		
-		log.info("started login functionality");
-
-		setUsername(uname);
-		setPassword(pass);
+		log.info("**********started login functionality***************");
+		log.info("entering username :  "+uname);
+		setText(txtUsername, uname);
+		log.info("entering password :  "+pass);
+		setText(txtPassword, pass);
+		//setUsername(uname);
+		//setPassword(pass);
 	
 		JavascriptExecutor executor = (JavascriptExecutor) driver;
 		executor.executeScript("arguments[0].click();", btnLogin);
 		
-		log.info(" login functionality done");
+		log.info("************* login functionality done *****************");
 
 		
 		/*driver.switchTo().frame("intercom-borderless-frame");
