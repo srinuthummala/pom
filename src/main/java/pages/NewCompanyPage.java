@@ -3,14 +3,12 @@ package pages;
 import java.util.List;
 
 import org.apache.log4j.Logger;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
 import base.TestBase;
 import utility.Utility;
 
@@ -35,6 +33,10 @@ public class NewCompanyPage extends TestBase {
 	@FindBys({@FindBy(xpath="//a[@context='company']")})
 	List<WebElement> listCompanyNames;
 	
+	@FindBy(xpath="//input[@name='client_id']")
+	WebElement chbxCompanyName;
+	
+	
 	public NewCompanyPage() {
 		PageFactory.initElements(driver, this);
 	}
@@ -50,6 +52,7 @@ public class NewCompanyPage extends TestBase {
 	}
 	
 	public void fillForm(String name, String industry, String revenue) {
+		log.info("**********form filling started ******");
 		log.info("switching to frame \"mainpanel\" ");
 		driver.switchTo().frame("mainpanel");
 		log.info("entering text into comapany name field: "+name);
@@ -62,13 +65,16 @@ public class NewCompanyPage extends TestBase {
 		click(btnSave);
 		driver.switchTo().defaultContent();
 		log.info("switched back to defaultcontent");
+		log.info("**********form filling done ******");
+
 
 	}
 	
 	public boolean isCompanyNameExists(String name) {
+		log.info("*********** verfying company name is add or not********");
 		log.info("switching to frame \"mainpanel\" ");
 		driver.switchTo().frame("mainpanel");
-		driver.findElement(By.xpath("//div[@id='navmenu']//li/a[text()='Companies']")).click();
+		//driver.findElement(By.xpath("//div[@id='navmenu']//li/a[text()='Companies']")).click();
 		List<WebElement> list =driver.findElements(By.xpath("//a[@context='company']"));
 		//WebElement element=CompanyName.findElement(By.xpath("//a[contains(text(), '"+name+"')]"));
 		Boolean flag =false;
@@ -83,6 +89,8 @@ public class NewCompanyPage extends TestBase {
 		
 		log.info("switching back to defaultcontent");
 		driver.switchTo().defaultContent();
+		log.info("*********** verfyied company name is add or not********");
+
 		return flag;
 	}
 	
@@ -97,5 +105,34 @@ public class NewCompanyPage extends TestBase {
 		return i;
 	}
 
+	public void deleteComany(String name) {
+		log.info("******** started company deletion **********");
+		log.info("switching to frame \"mainpanel\" ");
+		driver.switchTo().frame("mainpanel");
+		//driver.findElement(By.xpath("//div[@id='navmenu']//li/a[text()='Companies']")).click();
+
+		List<WebElement> list =driver.findElements(By.xpath("//a[@context='company']"));
+		//WebElement element=CompanyName.findElement(By.xpath("//a[contains(text(), '"+name+"')]"));
+		Boolean flag =false;
+		for(WebElement ele : list) {
+			String str = ele.getText();
+			if(str.equals(name)) {
+				WebElement element=driver.findElement(By.xpath("//a[contains(text(), '"+name+"')]/../preceding-sibling::td/input"));
+				element.click();
+				log.info(element.isSelected());
+				driver.findElement(By.xpath("//a[contains(text(), '"+name+"')]/../following-sibling::td/a/i[@title='Delete']")).click();
+				//System.out.println(element.isSelected());
+				Alert alert = driver.switchTo().alert();
+				alert.accept();
+				flag=true;
+				break;
+			}
+		}
 		
+		log.info("switching back to defaultcontent");
+		driver.switchTo().defaultContent();	
+		log.info("******** company deletion completed **********");
+
+		
+	}
 }

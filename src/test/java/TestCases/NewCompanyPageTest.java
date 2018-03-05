@@ -2,6 +2,7 @@ package TestCases;
 
 import org.apache.log4j.Logger;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
@@ -38,7 +39,7 @@ public class NewCompanyPageTest extends TestBase {
 		newCompanyPage = homePage.clickOnNewCompany();
 		newCompanyPage.fillForm(company, branch, revenue);
 		log.info("clicking on companies menu");
-		//homePage.clickOnCompanies();
+		homePage.clickOnCompanies();
 		log.info("verifying company is added or not");
 		Assert.assertTrue(newCompanyPage.isCompanyNameExists(company));
 		log.info("company added successfully");
@@ -51,13 +52,16 @@ public class NewCompanyPageTest extends TestBase {
 		return data;
 	}
 	
-	//@Test
-	public void loo() {
-		System.out.println(newCompanyPage.listOfCompanies());
+	@Test
+	public void veryCompanyDeletion() {
+		homePage.clickOnCompanies();
+		newCompanyPage.deleteComany("srinu7");
+		Assert.assertTrue(!newCompanyPage.isCompanyNameExists("srinu7"));
+
 	}
 	
-	@AfterTest
+	@AfterMethod
 	public void quit() {
-		driver.quit();
+		driver.close();
 	}
 }
