@@ -20,7 +20,7 @@ import utility.Utility;
 
 public class TestBase {
 	public static WebDriver driver;
-	public static Properties prop;
+	public static Properties prop; 
 
 	public static Logger log = Utility.getLogger(TestBase.class);
 
