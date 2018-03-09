@@ -1,9 +1,6 @@
 package pages;
 
-import java.util.List;
-
 import org.apache.log4j.Logger;
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -31,8 +28,15 @@ public class HomePage extends TestBase {
 	@FindBy(xpath="//div[@id='navmenu']//li/a[text()='Contacts']")
 	WebElement ddContacts;
 	
-	@FindBy(xpath="//div[@id='navmenu']//li/a[text()='Deals']")
+	@FindBy(xpath="//a[@title='Deals']")
 	WebElement ddDeals;
+	
+	@FindBy(xpath="//a[@title='New Deal']")
+	WebElement lnkNewDeal;
+	
+	@FindBy(xpath="//a[@title='Products']")
+	WebElement lnkProducts;
+	
 	public HomePage() {
 		PageFactory.initElements(driver, this);
 	}
@@ -92,4 +96,20 @@ public class HomePage extends TestBase {
 		return new NewCompanyPage();
 	}
 
+	public DealsPage clickOnDeals() {
+		click(ddDeals);
+		return new DealsPage();
+	}
+	
+	public NewDelasPage clickOnNewDeals() {
+		mouseHoverOn(ddDeals);
+		click(lnkNewDeal);
+		return new NewDelasPage();
+	}
+	
+	public ProductsPage clickOnProducts() {
+		mouseHoverOn(ddDeals);
+		click(lnkProducts);
+		return new ProductsPage();
+	}
 }

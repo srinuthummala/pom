@@ -1,86 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="3" passed="2">
+<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="133961" started-at="2018-03-04T17:19:56Z" finished-at="2018-03-04T17:22:10Z">
+  <suite name="Default suite" duration-ms="13390" started-at="2018-03-09T10:45:21Z" finished-at="2018-03-09T10:45:35Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="133961" started-at="2018-03-04T17:19:56Z" finished-at="2018-03-04T17:22:10Z">
-      <class name="TestCases.NewCompanyPageTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:TestCases.NewCompanyPageTest@520a3426]" name="setup" is-config="true" duration-ms="22448" started-at="2018-03-04T22:49:56Z" finished-at="2018-03-04T22:50:19Z">
+    <test name="Default test" duration-ms="13390" started-at="2018-03-09T10:45:21Z" finished-at="2018-03-09T10:45:35Z">
+      <class name="TestCases.LoginPageTest">
+        <test-method status="PASS" signature="init()[pri:0, instance:TestCases.LoginPageTest@335eadca]" name="init" is-config="true" duration-ms="9544" started-at="2018-03-09T16:15:21Z" finished-at="2018-03-09T16:15:31Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="verfyNewCompanyFeature(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:TestCases.NewCompanyPageTest@520a3426]" name="verfyNewCompanyFeature" duration-ms="12653" started-at="2018-03-04T22:50:19Z" data-provider="data" finished-at="2018-03-04T22:50:31Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[srinu10]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[civil]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[300]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verfyNewCompanyFeature -->
-        <test-method status="PASS" signature="quit()[pri:0, instance:TestCases.NewCompanyPageTest@520a3426]" name="quit" is-config="true" duration-ms="606" started-at="2018-03-04T22:50:31Z" finished-at="2018-03-04T22:50:32Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- quit -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:TestCases.NewCompanyPageTest@520a3426]" name="setup" is-config="true" duration-ms="37309" started-at="2018-03-04T22:50:32Z" finished-at="2018-03-04T22:51:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="verfyNewCompanyFeature(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:TestCases.NewCompanyPageTest@520a3426]" name="verfyNewCompanyFeature" duration-ms="18805" started-at="2018-03-04T22:51:09Z" data-provider="data" finished-at="2018-03-04T22:51:28Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[srinu11]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[ele]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[400]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verfyNewCompanyFeature -->
-        <test-method status="PASS" signature="quit()[pri:0, instance:TestCases.NewCompanyPageTest@520a3426]" name="quit" is-config="true" duration-ms="232" started-at="2018-03-04T22:51:28Z" finished-at="2018-03-04T22:51:28Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- quit -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:TestCases.NewCompanyPageTest@520a3426]" name="setup" is-config="true" duration-ms="31962" started-at="2018-03-04T22:51:28Z" finished-at="2018-03-04T22:52:00Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="FAIL" signature="veryCompanyDeletion()[pri:0, instance:TestCases.NewCompanyPageTest@520a3426]" name="veryCompanyDeletion" duration-ms="9272" started-at="2018-03-04T22:52:00Z" finished-at="2018-03-04T22:52:09Z">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [true] but found [false]]]>
-            </message>
+        </test-method> <!-- init -->
+        <test-method status="FAIL" signature="verifyLogin()[pri:0, instance:TestCases.LoginPageTest@335eadca]" name="verifyLogin" duration-ms="1654" started-at="2018-03-09T16:15:31Z" finished-at="2018-03-09T16:15:33Z">
+          <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:93)
-	at org.testng.Assert.failNotEquals(Assert.java:512)
-	at org.testng.Assert.assertTrue(Assert.java:41)
-	at org.testng.Assert.assertTrue(Assert.java:51)
-	at TestCases.NewCompanyPageTest.veryCompanyDeletion(NewCompanyPageTest.java:59)
+              <![CDATA[java.lang.NullPointerException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy9.clear(Unknown Source)
+	at base.TestBase.setText(TestBase.java:72)
+	at pages.LoginPage.login(LoginPage.java:45)
+	at TestCases.LoginPageTest.verifyLogin(LoginPageTest.java:38)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -108,15 +51,82 @@
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- veryCompanyDeletion -->
-        <test-method status="PASS" signature="quit()[pri:0, instance:TestCases.NewCompanyPageTest@520a3426]" name="quit" is-config="true" duration-ms="622" started-at="2018-03-04T22:52:09Z" finished-at="2018-03-04T22:52:10Z">
+        </test-method> <!-- verifyLogin -->
+        <test-method status="FAIL" signature="quit()[pri:0, instance:TestCases.LoginPageTest@335eadca]" name="quit" is-config="true" duration-ms="2129" started-at="2018-03-09T16:15:33Z" finished-at="2018-03-09T16:15:35Z">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[chrome not reachable
+  (Session info: chrome=64.0.3282.186)
+  (Driver info: chromedriver=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.6.0', revision: '6fbf3ec767', time: '2017-09-27T15:28:36.4Z'
+System info: host: 'CHOWDARY', ip: '192.168.112.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_144'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, hasTouchScreen=false, platform=XP, acceptSslCerts=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, platformName=XP, setWindowRect=true, unexpectedAlertBehaviour=, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f), userDataDir=C:\Users\CHOWDARY\AppData\Local\Temp\scoped_dir9636_25827}, takesHeapSnapshot=true, pageLoadStrategy=normal, unhandledPromptBehavior=, databaseEnabled=false, handlesAlerts=true, version=64.0.3282.186, browserConnectionEnabled=false, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 7cb02be1413b9e6d1d740659c2937887]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: chrome not reachable
+  (Session info: chrome=64.0.3282.186)
+  (Driver info: chromedriver=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.6.0', revision: '6fbf3ec767', time: '2017-09-27T15:28:36.4Z'
+System info: host: 'CHOWDARY', ip: '192.168.112.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_144'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, hasTouchScreen=false, platform=XP, acceptSslCerts=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, platformName=XP, setWindowRect=true, unexpectedAlertBehaviour=, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f), userDataDir=C:\Users\CHOWDARY\AppData\Local\Temp\scoped_dir9636_25827}, takesHeapSnapshot=true, pageLoadStrategy=normal, unhandledPromptBehavior=, databaseEnabled=false, handlesAlerts=true, version=64.0.3282.186, browserConnectionEnabled=false, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 7cb02be1413b9e6d1d740659c2937887
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:82)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:45)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:586)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:643)
+	at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:472)
+	at TestCases.LoginPageTest.quit(LoginPageTest.java:45)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:723)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quit -->
-      </class> <!-- TestCases.NewCompanyPageTest -->
+      </class> <!-- TestCases.LoginPageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

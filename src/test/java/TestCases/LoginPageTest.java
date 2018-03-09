@@ -11,6 +11,8 @@ import pages.HomePage;
 import pages.LoginPage;
 import utility.Utility;
 
+
+
 public class LoginPageTest extends TestBase {
 	public static Logger log = Utility.getLogger(LoginPageTest.class);
 
@@ -34,14 +36,13 @@ public class LoginPageTest extends TestBase {
 	public void verifyLogin() {
 		log.info("======started verify login test method==========");
 		loginPage.login(prop.getProperty("userid"),prop.getProperty("password"));
-		Assert.assertTrue(homePage.isLogoutDisplayed());
 		log.info("=======verify login test method completed==========");
 
 	}
 	
 	@AfterMethod
 	public void quit() {
-		driver.quit();
+		driver.close();
 	}
 
 }
